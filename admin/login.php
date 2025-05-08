@@ -1,4 +1,3 @@
-// Include antibot-beveiliging // Include antibot-beveiliging
 // Include antibot-beveiliging
 // Include antibot-beveiliging
 // Include antibot-beveiliging
