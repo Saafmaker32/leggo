@@ -1,12 +1,11 @@
 <?php
-require_once('db_connect.php');
 $servername = getenv("MYSQLHOST");
 $username = getenv("MYSQLUSER");
 $password = getenv("MYSQLPASSWORD");
 $dbname = getenv("MYSQLDATABASE");
 
 // Maak de verbinding
-$conn = // Database connection via db_connect.php
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Controleer verbinding
 if ($conn->connect_error) {
