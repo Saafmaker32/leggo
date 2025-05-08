@@ -6,8 +6,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     exit();
 }
 
-include '../db_connect.php';
-$conn = getDBConnection();
+require_once('../db_connect.php');
 ?>
 
 <!DOCTYPE html>
