@@ -1,19 +1,14 @@
 <?php
-function getDBConnection() {
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "my_base";
+$servername = getenv("MYSQLHOST");
+$username = getenv("MYSQLUSER");
+$password = getenv("MYSQLPASSWORD");
+$dbname = getenv("MYSQLDATABASE");
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
+// Maak de verbinding
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-    if ($conn->connect_error) {
-        // Log fout op server, toon geen gevoelige info aan gebruiker
-        error_log("Database connection failed: " . $conn->connect_error);
-        http_response_code(500);
-        exit("Databasefout. Probeer het later opnieuw.");
-    }
-
-    return $conn;
+// Controleer verbinding
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 ?>
