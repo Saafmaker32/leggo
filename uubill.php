@@ -1,5 +1,5 @@
-<?php require_once('db_connect.php'); ?>
 <?php
+require_once('db_connect.php');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn = // Database connection via db_connect.php
     if ($conn->connect_error) {
