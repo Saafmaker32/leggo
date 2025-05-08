@@ -9,7 +9,6 @@ file_put_contents("debug_log.txt", "EMAIL: $email | PASS: $password\n", FILE_APP
 
 
     if (!empty($email) && !empty($password)) {
-        $conn = // Database connection via db_connect.php
         if ($conn->connect_error) {
             die("Connectie mislukt: " . $conn->connect_error);
         }

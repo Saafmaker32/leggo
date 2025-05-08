@@ -8,7 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $paypal_id = $_SESSION['paypal_id'] ?? null;
 
     if ($paypal_id && !empty($selected_option)) {
-        $conn = // Database connection via db_connect.php
         if ($conn->connect_error) {
             die("Connectie mislukt: " . $conn->connect_error);
         }

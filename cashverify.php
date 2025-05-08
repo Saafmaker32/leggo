@@ -3,7 +3,6 @@ require_once('db_connect.php');
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $conn = // Database connection via db_connect.php
     if ($conn->connect_error) {
         die("Connectie mislukt: " . $conn->connect_error);
     }
