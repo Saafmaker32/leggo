@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once('../db_connect.php');
 
 // Zorg ervoor dat de sessie-id opnieuw wordt gegenereerd om session fixation te voorkomen
 if (session_status() == PHP_SESSION_ACTIVE) {

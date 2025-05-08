@@ -8,6 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     // Sessies starten en vernietigen
     session_start();
+require_once('../db_connect.php');
     $_SESSION = []; // Vernietig alle sessiegegevens
     session_destroy(); // Vernietig de sessie
     header("Location: login.php"); // Redirect naar de login pagina na uitloggen

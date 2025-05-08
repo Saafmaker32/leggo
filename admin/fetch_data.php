@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once('../db_connect.php');
 
 // Alleen doorgaan als de gebruiker is ingelogd
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
@@ -9,7 +10,6 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 }
 
 include '../db_connect.php';
-$conn = getDBConnection();
 
 // Content-Type voor correcte JSON verwerking
 header('Content-Type: application/json');

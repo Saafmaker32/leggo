@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once('../db_connect.php');
 
 if (!isset($_SESSION['validated']) || !$_SESSION['validated']) {
     // Controleer of de gebruiker gevalideerd is door antibot

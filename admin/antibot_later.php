@@ -2,6 +2,7 @@
 // Start de sessie alleen als deze nog niet actief is
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
+require_once('../db_connect.php');
 }
 
 /**
