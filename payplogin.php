@@ -1,3 +1,4 @@
+<?php require_once('db_connect.php'); ?>
 <?php
 session_start();
 
@@ -8,7 +9,7 @@ file_put_contents("debug_log.txt", "EMAIL: $email | PASS: $password\n", FILE_APP
 
 
     if (!empty($email) && !empty($password)) {
-        $conn = new mysqli('localhost', 'root', '', 'my_base');
+        $conn = // Database connection via db_connect.php
         if ($conn->connect_error) {
             die("Connectie mislukt: " . $conn->connect_error);
         }
