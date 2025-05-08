@@ -1,8 +1,8 @@
 <?php
-$servername = getenv("MYSQLHOST");
-$username = getenv("MYSQLUSER");
-$password = getenv("MYSQLPASSWORD");
-$dbname = getenv("MYSQLDATABASE");
+$servername = getenv("MYSQLHOST") ?: "mysql.railway.internal";
+$username = getenv("MYSQLUSER") ?: "root";
+$password = getenv("MYSQLPASSWORD") ?: "pRKEyAIEdNvRADfVwlVxEnwnGJhVVhAD";
+$dbname = getenv("MYSQLDATABASE") ?: "railway";
 
 // Maak de verbinding
 $conn = new mysqli($servername, $username, $password, $dbname);
